@@ -10,7 +10,7 @@ config = {
 conn = mysql.connector.connect(**config)
 cursor = conn.cursor()
 
-cursor.execute("SELECT * from meigara_m where meigara_cd = 9001")
+cursor.execute("SELECT * from meigara_m where meigara_cd in(9001,8400)")
 rows = cursor.fetchall()
 
 for row in rows:
